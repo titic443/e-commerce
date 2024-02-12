@@ -1,0 +1,25 @@
+<mat-toolbar class="max-w-7xl mx-auto border-x justify-between">
+  <a href="home">Home</a>
+  <button mat-icon-button [matMenuTriggerFor]="menuRef">
+    <mat-icon [matBadge]="1" matBadgeColor="warn">shopping_cart</mat-icon>
+  </button>
+  <mat-menu #menuRef>
+    <!-- <mat-menu #menuRef="matMenu"> -->
+    <div class="p-3 divide-y divide-solid">
+      <div class="pb-3 flex justify-between">
+        <span class="mr-16">1 items</span>
+        <a href="cart">view cart</a>
+      </div>
+      <div class="py-3">
+        <div class="flex justify-between font-thin text-sm mb-3">
+          Keyboard x 1
+          <span class="font-bold">{{ "150" | currency : "THB" }}</span>
+        </div>
+        <div class="flex justify-between font-thin text-sm my-3">
+          Keyboard x 1
+          <span class="font-bold">{{ "150" | currency : "THB" }}</span>
+        </div>
+      </div>
+    </div>
+  </mat-menu>
+</mat-toolbar>
