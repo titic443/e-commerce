@@ -1,3 +1,4 @@
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,6 +17,9 @@ import { Component } from '@angular/core';
     MatBadgeModule,
     MatMenuModule,
     MatButtonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
