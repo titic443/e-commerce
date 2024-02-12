@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './product-header.component.css',
 })
 export class ProductHeaderComponent {
+  @Output() columnsCountChange = new EventEmitter<number>();
   sort = 'desc';
   itemsShowCount = 12;
 
@@ -20,5 +21,9 @@ export class ProductHeaderComponent {
 
   onItemsUpdated(count: number): void {
     this.itemsShowCount = count;
+  }
+
+  onColumnsUpdated(colsNum: number): void {
+    this.columnsCountChange.emit(colsNum);
   }
 }

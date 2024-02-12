@@ -9,4 +9,9 @@ import { ProductHeaderComponent } from './components/product-header/product-head
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  cols = 3;
+  onColumnsCountChange(colsNum: number) {
+    this.cols = colsNum;
+  }
+}
