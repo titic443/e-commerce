@@ -1,11 +1,30 @@
 <mat-drawer-container class="min-h-[50%] max-w-7xl" [autosize]="true">
   <mat-drawer mode="side" opened class="p-6">
-    <div>Filter</div>
+    <app-filter (showCategory)="onShowCategory($event)"></app-filter>
   </mat-drawer>
   <mat-drawer-content class="p-6">
     <app-product-header
       (columnsCountChange)="onColumnsCountChange($event)"
     ></app-product-header>
-    {{ cols }}
+    <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowHeight">
+      <mat-grid-tile>
+        <app-product-box [fullWidthMode]="cols === 1"></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box [fullWidthMode]="cols === 1"></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box [fullWidthMode]="cols === 1"></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box [fullWidthMode]="cols === 1"></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box [fullWidthMode]="cols === 1"></app-product-box>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-product-box [fullWidthMode]="cols === 1"></app-product-box>
+      </mat-grid-tile>
+    </mat-grid-list>
   </mat-drawer-content>
 </mat-drawer-container>
